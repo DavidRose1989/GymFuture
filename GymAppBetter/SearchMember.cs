@@ -21,7 +21,7 @@ namespace GymAppBetter
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtSearch.Text != "") ;
+            if (txtSearch.Text != "") 
             {
                 MySqlConnection conn = new MySqlConnection();
                 conn.ConnectionString = "Server=localhost;Database=gym;uid=root;Pwd=password;Port=3306;";
@@ -36,7 +36,10 @@ namespace GymAppBetter
 
                 dataGridView1.DataSource = DS.Tables[0];
             }
-          
+            else
+            {
+               MessageBox.Show("Please enter some id", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);  
+            }
            
             
 

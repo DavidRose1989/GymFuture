@@ -1515,11 +1515,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\David\\source\\repos\\GymAppBetter\\GymAppBetter\\GymAppBetter.csproj",
+      "projectUniqueName": "C:\\Users\\David\\OneDrive\\Desktop\\GymAppBetter\\GymAppBetter\\GymAppBetter.csproj",
       "projectName": "GymAppBetter",
-      "projectPath": "C:\\Users\\David\\source\\repos\\GymAppBetter\\GymAppBetter\\GymAppBetter.csproj",
+      "projectPath": "C:\\Users\\David\\OneDrive\\Desktop\\GymAppBetter\\GymAppBetter\\GymAppBetter.csproj",
       "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\David\\source\\repos\\GymAppBetter\\GymAppBetter\\obj\\",
+      "outputPath": "C:\\Users\\David\\OneDrive\\Desktop\\GymAppBetter\\GymAppBetter\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\David\\AppData\\Roaming\\NuGet\\NuGet.Config",
