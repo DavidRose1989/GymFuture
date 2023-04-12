@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,23 +11,43 @@ using System.Windows.Forms;
 
 namespace GymAppBetter
 {
-    public partial class SearchMember : Form
+    public partial class DeleteMember : Form
     {
-        public SearchMember()
+        public DeleteMember()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtSearch.Text != "")
+
+            if (MessageBox.Show("This will delete your data. Confirm?", "Delete data", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
+
+
+
                 MySqlConnection conn = new MySqlConnection();
                 conn.ConnectionString = "Server=localhost;Database=gym;uid=root;Pwd=password;Port=3306;";
                 MySqlCommand cmd = new MySqlCommand();
                 cmd.Connection = conn;
 
-                cmd.CommandText = "select * from users where MID = " + txtSearch.Text + "";
+                cmd.CommandText = "delete from users where MID =  " + textBox1.Text + "";
+
+                MySqlDataAdapter DA = new MySqlDataAdapter(cmd);
+                DataSet DS = new DataSet();
+                DA.Fill(DS);
+
+               
+            }
+            else
+            {
+                this.Activate();
+                MySqlConnection conn = new MySqlConnection();
+                conn.ConnectionString = "Server=localhost;Database=gym;uid=root;Pwd=password;Port=3306;";
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.Connection = conn;
+
+                cmd.CommandText = "select * from users";
 
                 MySqlDataAdapter DA = new MySqlDataAdapter(cmd);
                 DataSet DS = new DataSet();
@@ -36,24 +55,16 @@ namespace GymAppBetter
 
                 dataGridView1.DataSource = DS.Tables[0];
             }
-            else
-            {
-                MessageBox.Show("Please enter some id", "Message", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
-
-
-
         }
 
-        private void SearchMember_Load(object sender, EventArgs e)
+        private void DeleteMember_Load(object sender, EventArgs e)
         {
             MySqlConnection conn = new MySqlConnection();
             conn.ConnectionString = "Server=localhost;Database=gym;uid=root;Pwd=password;Port=3306;";
             MySqlCommand cmd = new MySqlCommand();
             cmd.Connection = conn;
 
-            cmd.CommandText = "select * from users where MID";
+            cmd.CommandText = "select * from users";
 
             MySqlDataAdapter DA = new MySqlDataAdapter(cmd);
             DataSet DS = new DataSet();

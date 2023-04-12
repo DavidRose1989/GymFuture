@@ -68,3 +68,5 @@ C:\Users\David\OneDrive\Desktop\GymAppBetter\GymAppBetter\obj\Debug\net6.0-windo
 C:\Users\David\OneDrive\Desktop\GymAppBetter\GymAppBetter\obj\Debug\net6.0-windows\GymAppBetter.pdb
 C:\Users\David\OneDrive\Desktop\GymAppBetter\GymAppBetter\obj\Debug\net6.0-windows\GymAppBetter.genruntimeconfig.cache
 C:\Users\David\OneDrive\Desktop\GymAppBetter\GymAppBetter\obj\Debug\net6.0-windows\ref\GymAppBetter.dll
+C:\Users\David\OneDrive\Desktop\GymAppBetter\GymAppBetter\obj\Debug\net6.0-windows\GymAppBetter.DeleteMember.resources
+C:\Users\David\OneDrive\Desktop\GymAppBetter\GymAppBetter\obj\Debug\net6.0-windows\GymAppBetter.Login.resources

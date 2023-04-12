@@ -105,6 +105,7 @@
             deleteMemberToolStripMenuItem.Name = "deleteMemberToolStripMenuItem";
             deleteMemberToolStripMenuItem.Size = new Size(235, 154);
             deleteMemberToolStripMenuItem.Text = "Delete Member";
+            deleteMemberToolStripMenuItem.Click += deleteMemberToolStripMenuItem_Click;
             // 
             // logOutToolStripMenuItem
             // 
@@ -113,6 +114,7 @@
             logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
             logOutToolStripMenuItem.Size = new Size(180, 154);
             logOutToolStripMenuItem.Text = "Log out";
+            logOutToolStripMenuItem.Click += logOutToolStripMenuItem_Click;
             // 
             // exitToolStripMenuItem
             // 
@@ -122,6 +124,7 @@
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             exitToolStripMenuItem.Size = new Size(238, 154);
             exitToolStripMenuItem.Text = "Exit";
+            exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
             // Form1
             // 

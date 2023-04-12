@@ -56,8 +56,36 @@ namespace GymAppBetter
 
         private void searchMemberToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SearchMember searchMember = new SearchMember(); 
+            SearchMember searchMember = new SearchMember();
             searchMember.Show();
+        }
+
+        private void deleteMemberToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeleteMember dm = new DeleteMember();
+            dm.Show();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("This will close your application. Confirm?", "CLOSE", MessageBoxButtons.YesNo, MessageBoxIcon.Error) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else
+            {
+                MessageBox.Show("Welcome Back", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Log OUT !! Confirm?","LOG OUT",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning) == DialogResult.OK)
+            {
+                this.Close();
+                Login lg = new Login();
+                lg.Show();
+            }
         }
     }
 }
